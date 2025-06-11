@@ -1,297 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GAYATRI DEGREE COLLEGE - SEETHANAGARAM</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    header {
-    background-color: #002855;
-    color: white;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    }
-
-    header img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%; /* Makes the image circular */
-    object-fit: cover;   /* Ensures the image fits nicely */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Adds subtle shadow */
-    transition: transform 0.3s ease;
-    }
-
-    header img:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-    }
-
-    header h1 {
-    font-size: 1.5rem;
-    }
-
-    nav {
-      background-color: #00509e;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      gap: 15px;
-      padding: 12px 20px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.95rem;
-      cursor: pointer;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      flex: 1;
-    }
-
-    section {
-      padding: 40px 20px;
-      display: none;
-    }
-
-    #home {
-      display: block;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 40px 20px;
-      background-color: #f5f5f5;
-    }
-
-    .hero-content {
-      background: white;
-      padding: 25px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .hero-img {
-      max-width: 100%;
-      height: auto;
-      animation: zoomEffect 10s ease-in-out infinite alternate;
-      border-radius: 12px;
-    }
-
-    @keyframes zoomEffect {
-      0% {
-        transform: scale(1);
-      }
-      100% {
-        transform: scale(1.05);
-      }
-    }
-
-    .section-layout {
-      display: flex;
-      align-items: flex-start;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .section-layout img {
-      width: 220px;
-      border-radius: 10px;
-      flex-shrink: 0;
-    }
-
-    .section-layout div {
-      flex: 1;
-    }
-
-    .section-layout div h2 {
-      margin-bottom: 10px;
-      font-size: 1.4rem;
-      color: #002855;
-    }
-
-    .section-layout div p, .section-layout div li {
-      margin: 5px 0;
-      line-height: 1.4;
-      font-size: 0.95rem;
-    }
-
-    footer {
-      background-color: #002855;
-      color: white;
-      text-align: center;
-      padding: 12px;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      nav {
-        justify-content: center;
-      }
-
-      .hero-content {
-        padding: 15px;
-      }
-
-      .section-layout {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .section-layout img {
-        width: 100%;
-        max-width: 300px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <img src="college.jpeg" alt="College Logo" />
-    <h1>GAYATRI DEGREE COLLEGE - SEETHANAGARAM</h1>
-  </header>
-
-  <nav>
-    <a onclick="showSection('home')">Home</a>
-    <a onclick="showSection('about')">About</a>
-    <a onclick="showSection('courses')">Courses</a>
-    <a onclick="showSection('departments')">Departments</a>
-    <a onclick="showSection('faculty')">Faculty</a>
-    <a onclick="showSection('contact')">Contact</a>
-  </nav>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <h2>Welcome to GAYATRI DEGREE College</h2>
-        <p>Your journey to a bright future starts here!</p>
-      </div>
-      <img src="college_home.jpg" alt="Hero Image" class="hero-img" />
-    </section>
-
-    <section id="about">
-      <div class="section-layout">
-        <img src="college.jpeg" alt="About Image">
-        <div>
-          <h2>About Us</h2>
-          <p>Gayatri Degree College is a premier institution offering world-class education and opportunities for students across various fields. We are committed to academic excellence and holistic development.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="courses">
-      <div class="section-layout">
-        <img src="college.jpeg" alt="Courses Image">
-        <div>
-          <h2>Our Courses</h2>
-          <ul>
-            <li>Bachelor of Science (B.Sc.)</li>
-            <li>Bachelor of Commerce (B.Com.)</li>
-            <li>Bachelor of Arts (B.A.)</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="departments">
-      <div class="section-layout">
-        <img src="college.jpeg" alt="Departments Image">
-        <div>
-          <h2>Departments</h2>
-          <ul>
-            <li>Computer Science</li>
-            <li>Commerce</li>
-            <li>Physics</li>
-            <li>English</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="faculty">
-      <div class="section-layout">
-        <img src="college.jpeg" alt="Faculty Image">
-        <div>
-          <h2>Allu Sriram</h2>
-          <p>Qualification: M.Sc. Chemistry</p>
-          <p>Designation: Lecturer</p>
-          <p>Field of Specialization: Organic Chemistry</p>
-        </div>
-        <div>
-          <h2>Allu Sriram</h2>
-          <p>Qualification: M.Sc. Chemistry</p>
-          <p>Designation: Lecturer</p>
-          <p>Field of Specialization: Organic Chemistry</p>
-        </div>
-        <div>
-          <h2>Allu Sriram</h2>
-          <p>Qualification: M.Sc. Chemistry</p>
-          <p>Designation: Lecturer</p>
-          <p>Field of Specialization: Organic Chemistry</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="section-layout">
-        <img src="college.jpeg" alt="Contact Image">
-        <div>
-          <h2>Contact Us</h2>
-          <p>Email: info@gayatridegreecollege.edu</p>
-          <p>Phone: +91-1234567890</p>
-          <p>Address: Seethanagaram, Manyam district, AP - 535546</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 GAYATRI DEGREE College. All rights reserved.</p>
-  </footer>
-
-  <script>
-    function showSection(sectionId) {
-      const sections = document.querySelectorAll("main > section");
-      sections.forEach(section => section.style.display = "none");
-
-      const selectedSection = document.getElementById(sectionId);
-      if (selectedSection) {
-        selectedSection.style.display = "block";
-      }
-    }
-  </script>
-
-</body>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>GAYATRI DEGREE COLLEGE - SEETHANAGARAM</title>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+      <style>
+         * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         }
+         html, body {
+         height: 100%;
+         font-family: 'Poppins', sans-serif;
+         background: #f3f4f6;
+         color: #333;
+         }
+         body {
+         display: flex;
+         flex-direction: column;
+         }
+         header {
+         background: linear-gradient(to right, #002855, #004080);
+         color: white;
+         padding: 20px;
+         display: flex;
+         align-items: center;
+         gap: 15px;
+         flex-wrap: wrap;
+         }
+         header img {
+         width: 80px;
+         height: 80px;
+         border-radius: 50%;
+         object-fit: cover;
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+         transition: transform 0.3s ease;
+         }
+         header img:hover {
+         transform: scale(1.05);
+         }
+         header h1 {
+         font-size: 1.8rem;
+         }
+         nav {
+         background: #00509e;
+         display: flex;
+         justify-content: flex-start;
+         flex-wrap: wrap;
+         gap: 15px;
+         padding: 14px 20px;
+         }
+         nav a {
+         color: white;
+         text-decoration: none;
+         font-weight: 600;
+         font-size: 1rem;
+         transition: all 0.3s ease;
+         padding: 6px 12px;
+         border-radius: 5px;
+         }
+         nav a:hover {
+         background: rgba(255, 255, 255, 0.15);
+         }
+         nav a.active {
+         background: rgba(255, 255, 255, 0.25);
+         border-bottom: 2px solid #fff;
+         }
+         main {
+         flex: 1;
+         width: 100%;
+         }
+         .hero {
+         position: relative;
+         width: 100%;
+         min-height: 100vh;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background: url('college_home.jpg') no-repeat center center / cover;
+         color: white;
+         overflow: hidden;
+         }
+         .hero::before {
+         content: '';
+         position: absolute;
+         inset: 0;
+         background: rgba(0, 40, 85, 0.6);
+         z-index: 0;
+         }
+         .hero-content {
+         position: relative;
+         z-index: 1;
+         text-align: center;
+         padding: 60px 20px;
+         max-width: 800px;
+         background: rgba(0, 0, 0, 0.4);
+         border-radius: 16px;
+         box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+         animation: fadeIn 1s ease;
+         }
+         .hero-content h2 {
+         font-size: 3rem;
+         margin-bottom: 20px;
+         }
+         .hero-content p {
+         font-size: 1.4rem;
+         line-height: 1.6;
+         }
+         section {
+         padding: 50px 20px;
+         display: none;
+         animation: fadeIn 0.5s ease-in-out;
+         }
+         #home {
+         display: block;
+         }
+         @keyframes fadeIn {
+         from { opacity: 0; transform: translateY(20px); }
+         to { opacity: 1; transform: translateY(0); }
+         }
+         .section-layout {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 30px;
+         align-items: flex-start;
+         justify-content: center;
+         }
+         .section-layout img {
+         width: 240px;
+         border-radius: 10px;
+         box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+         flex-shrink: 0;
+         }
+         .section-layout div {
+         flex: 1;
+         max-width: 700px;
+         }
+         .section-layout div h2 {
+         margin-bottom: 10px;
+         font-size: 1.5rem;
+         color: #002855;
+         }
+         .section-layout div p, 
+         .section-layout div li {
+         margin: 5px 0;
+         line-height: 1.6;
+         font-size: 1rem;
+         }
+         #faculty .section-layout {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+         gap: 25px;
+         margin-top: 30px;
+         }
+         #faculty .section-layout > div {
+         background: white;
+         padding: 20px;
+         border-radius: 12px;
+         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+         transition: transform 0.3s ease;
+         }
+         #faculty .section-layout > div:hover {
+         transform: translateY(-5px);
+         }
+         #faculty h2 {
+         font-size: 1.2rem;
+         color: #004080;
+         }
+         #courses {
+         padding: 60px 20px;
+         background: linear-gradient(to right, #f9fafc, #eef3f8);
+         }
+         .courses-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+         gap: 30px;
+         max-width: 1000px;
+         margin: 0 auto;
+         }
+         .course-card {
+         background: white;
+         border-radius: 14px;
+         padding: 25px;
+         box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+         text-align: center;
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+         border-top: 6px solid #004080;
+         }
+         .course-card h3 {
+         color: #004080;
+         margin-bottom: 10px;
+         font-size: 1.2rem;
+         }
+         .course-card p {
+         color: #555;
+         font-size: 1rem;
+         line-height: 1.5;
+         }
+         .course-card:hover {
+         transform: translateY(-6px);
+         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+         }
+         footer {
+         background: #002855;
+         color: white;
+         text-align: center;
+         padding: 14px;
+         font-size: 0.9rem;
+         }
+         @media (max-width: 768px) {
+         header {
+         flex-direction: column;
+         text-align: center;
+         }
+         nav {
+         justify-content: center;
+         gap: 10px;
+         }
+         .section-layout {
+         flex-direction: column;
+         align-items: center;
+         }
+         .section-layout img {
+         width: 100%;
+         max-width: 320px;
+         }
+         .hero-content {
+         padding: 20px;
+         }
+         .hero-content h2 {
+         font-size: 2rem;
+         }
+         .hero-content p {
+         font-size: 1.1rem;
+         }
+         }
+      </style>
+   </head>
+   <body>
+      <header>
+         <img src="college.jpeg" alt="College Logo" />
+         <h1>GAYATRI DEGREE COLLEGE - SEETHANAGARAM</h1>
+      </header>
+      <nav>
+         <a onclick="showSection('home')">Home</a>
+         <a onclick="showSection('about')">About</a>
+         <a onclick="showSection('courses')">Courses</a>
+         <a onclick="showSection('faculty')">Faculty</a>
+         <a onclick="showSection('contact')">Contact</a>
+      </nav>
+      <main>
+         <section class="hero" id="home">
+            <div class="hero-content">
+               <h2>Welcome to GAYATRI DEGREE COLLEGE</h2>
+               <p>Empowering Students with Knowledge, Values, and a Vision for Tomorrow</p>
+            </div>
+         </section>
+         <section id="about">
+            <div class="section-layout">
+               <img src="college.jpeg" alt="About Image">
+               <div>
+                  <h2>About Us</h2>
+                  <p>Gayatri Degree College is a premier institution offering world-class education and opportunities for students across various fields. We are committed to academic excellence and holistic development.</p>
+               </div>
+            </div>
+         </section>
+         <section id="courses">
+            <h2 style="text-align: center; font-size: 2rem; margin-bottom: 30px; color: #002855;">Our Courses</h2>
+            <div class="courses-grid">
+               <div class="course-card">
+                  <h3>B.A. Honours</h3>
+                  <p>Political Science, Economics</p>
+               </div>
+               <div class="course-card">
+                  <h3>B.Sc. Honours</h3>
+                  <p>Computer Science, Chemistry</p>
+               </div>
+               <div class="course-card">
+                  <h3>B.Sc. Honours</h3>
+                  <p>Chemistry, Computer Science</p>
+               </div>
+               <div class="course-card">
+                  <h3>B.Sc. Honours</h3>
+                  <p>Zoology, Chemistry</p>
+               </div>
+               <div class="course-card">
+                  <h3>B.Com. Honours</h3>
+                  <p>Computer Applications</p>
+               </div>
+            </div>
+         </section>
+         <section id="faculty">
+            <div class="section-layout">
+               <div>
+                  <h2>K. Tirupati Naidu</h2>
+                  <p>Qualification: M.A.</p>
+                  <p>Designation: Principal</p>
+               </div>
+               <div>
+                  <h2>B. Tanoj Kumar</h2>
+                  <p>Qualification: M.A.</p>
+                  <p>Designation: Lecturer</p>
+                  <p>Specialization: Telugu</p>
+               </div>
+               <div>
+                  <h2>N. Trinadha</h2>
+                  <p>Qualification: M.A.</p>
+                  <p>Designation: Lecturer</p>
+                  <p>Specialization: English</p>
+               </div>
+               <div>
+                  <h2>Ch. Narayana Rao</h2>
+                  <p>Qualification: M.Sc.</p>
+                  <p>Designation: Lecturer</p>
+                  <p>Specialization: Organic Chemistry</p>
+               </div>
+               <div>
+                  <h2>R. Vijay Kumar</h2>
+                  <p>Qualification: M.Sc.</p>
+                  <p>Designation: Lecturer</p>
+                  <p>Specialization: Computers</p>
+               </div>
+               <div>
+                  <h2>V. Chinnam Naidu</h2>
+                  <p>Qualification: M.A.</p>
+                  <p>Designation: Lecturer</p>
+                  <p>Specialization: Politics</p>
+               </div>
+               <div>
+                  <h2>K. Hemabhushan</h2>
+                  <p>Qualification: M.A.</p>
+                  <p>Designation: Lecturer</p>
+                  <p>Specialization: Economics</p>
+               </div>
+               <div>
+                  <h2>A. Lalitha</h2>
+                  <p>Qualification: M.Sc.</p>
+                  <p>Designation: Lecturer</p>
+                  <p>Specialization: Chemistry</p>
+               </div>
+            </div>
+         </section>
+         <section id="contact">
+            <div class="section-layout">
+               <img src="college.jpeg" alt="Contact Image">
+               <div>
+                  <h2>Contact Us</h2>
+                  <p>Email: info@gayatridegreecollege.edu</p>
+                  <p>Phone: +91-1234567890</p>
+                  <p>Address: Seethanagaram, Manyam district, AP - 535546</p>
+               </div>
+            </div>
+         </section>
+      </main>
+      <footer>
+         <p>&copy; 2025 GAYATRI DEGREE College, Seethanagaram. All rights reserved.</p>
+      </footer>
+      <script>
+         function showSection(sectionId) {
+             document.querySelectorAll("main > section").forEach(section => section.style.display = "none");
+             document.getElementById(sectionId).style.display = "block";
+         
+             document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
+             document.querySelectorAll("nav a").forEach(a => {
+             if (a.textContent.toLowerCase() === sectionId.toLowerCase()) {
+                 a.classList.add("active");
+             }
+             });
+         }
+      </script>
+   </body>
 </html>
